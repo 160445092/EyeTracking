@@ -23,15 +23,15 @@ class ViewController: UIViewController,AVCaptureFileOutputRecordingDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.view.backgroundColor = UIColor.black
-        self.session.delegate = self
         
+        self.session.delegate = self
+        self.setUpCamera()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         // "Reset" to run the AR session for the first time.
-        resetTracking()
+        
     }
     
     func setUpCamera() {
@@ -91,7 +91,7 @@ class ViewController: UIViewController,AVCaptureFileOutputRecordingDelegate  {
                 
                 self.recordButton.backgroundColor = .red
                 self.recordButton.setTitle("●Recording", for: .normal)
-                
+                self.resetTracking()
             }
     }
     func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {

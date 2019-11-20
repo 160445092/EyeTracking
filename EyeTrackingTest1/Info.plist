@@ -62,5 +62,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>写真の許可</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>マイクロフォンの許可</string>
 </dict>
 </plist>
